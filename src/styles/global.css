@@ -138,6 +138,7 @@ table {
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  height: 100%;
 }
 
 *,
@@ -147,7 +148,13 @@ html {
 }
 
 body {
+  background-color: #fafbfc;
+  height: 100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
+}
+
+#root {
+  height: 100%;
 }

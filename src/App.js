@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react'
+import './styles/global.css'
+import TwoColumn from './layouts/TwoColumn'
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <header>
-          <h1>Welcome to React</h1>
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <TwoColumn>
+    <h1>Welcome to React</h1>
+  </TwoColumn>
+)
 
-export default App;
+export default App
