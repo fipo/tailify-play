@@ -11,7 +11,7 @@ const Wrapper = glamorous.div({
 
 const Aside = glamorous.aside({
   backgroundColor: _variables.black,
-  color: _variables.white,
+  color: _variables.lightGrey,
   gridColumn: 1,
   gridRow: 2,
   padding: '0 10px',

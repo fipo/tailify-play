@@ -1,7 +1,9 @@
 const _variables = {
   fontSize: '1.4rem',
   black: '#323232',
-  white: '#cecece'
+  white: '#fff',
+  lightGrey: '#cecece',
+  grey: '#e6e6e6'
 }
 
 export default _variables
