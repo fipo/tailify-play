@@ -11,14 +11,17 @@ const PostWrapper = glamorous.div({
   paddingBottom: 28,
   height: 318,
   width: 318,
+  '&:hover': {
+    cursor: 'pointer'
+  },
   '& img': {
     width: '100%'
   }
 })
 
 const Post = props => (
-  <PostWrapper>
-    <img src={props.path} alt={props.filename} />
+  <PostWrapper onClick={() => props.handleClick(props.relativePath)}>
+    <img src={props.fullPath} alt={props.filename} />
   </PostWrapper>
 )
 export default Post

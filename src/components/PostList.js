@@ -8,9 +8,11 @@ const PostListWrapper = glamorous.div({
   margin: '0 auto',
   width: 984
 })
-const PostList = ({ posts }) => (
+const PostList = ({ posts, handleClick }) => (
   <PostListWrapper>
-    {posts.map(post => <Post key={post.id} {...post} />)}
+    {posts.map(post => (
+      <Post key={post.id} {...post} handleClick={handleClick} />
+    ))}
   </PostListWrapper>
 )
 export default PostList
