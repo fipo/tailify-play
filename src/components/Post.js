@@ -1,5 +1,4 @@
 import React from 'react'
-import { BASE_IMAGE_URL } from '../constants'
 import glamorous from 'glamorous'
 import _variables from '../styles/_variables'
 
@@ -10,7 +9,8 @@ const PostWrapper = glamorous.div({
   margin: 5,
   overflow: 'hidden',
   paddingBottom: 28,
-  width: 236,
+  height: 318,
+  width: 318,
   '& img': {
     width: '100%'
   }
@@ -18,7 +18,7 @@ const PostWrapper = glamorous.div({
 
 const Post = props => (
   <PostWrapper>
-    <img src={BASE_IMAGE_URL + props.path} alt="" />
+    <img src={props.path} alt={props.filename} />
   </PostWrapper>
 )
 export default Post

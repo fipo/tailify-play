@@ -10,7 +10,7 @@ const PostListWrapper = glamorous.div({
 })
 const PostList = ({ posts }) => (
   <PostListWrapper>
-    {posts.map((post, index) => <Post key={index} {...post} />)}
+    {posts.map(post => <Post key={post.id} {...post} />)}
   </PostListWrapper>
 )
 export default PostList
