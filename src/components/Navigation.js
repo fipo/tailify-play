@@ -1,28 +1,31 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import _variables from '../styles/_variables'
+import { NavLink } from 'react-router-dom'
 
-const UploadButton = glamorous.button({
-  backgroundColor: '#494949',
+const NavButton = glamorous(NavLink)({
   border: 0,
-  color: _variables.lightGrey,
-  padding: 0,
-  fontSize: _variables.fontSize,
-  width: '100%',
-  textAlign: 'left',
-  display: 'block',
-  lineHeight: '26px',
   borderRadius: 8,
+  color: _variables.lightGrey,
   cursor: 'pointer',
+  display: 'block',
+  fontSize: _variables.fontSize,
+  lineHeight: '26px',
+  padding: 0,
   paddingLeft: 8,
+  textAlign: 'left',
+  textDecoration: 'none',
+  width: '100%',
   '&:focus': { outline: 'none' },
-  '&:hover': { color: _variables.white }
+  '&:hover': { color: _variables.white },
+  '.active': { backgroundColor: '#494949' }
 })
 
 const Navigation = props => (
   <ul>
     <li>
-      <UploadButton>Home</UploadButton>
+      <NavButton to="/">Home</NavButton>
+      <NavButton to="/report">Campaign Report</NavButton>
     </li>
   </ul>
 )
