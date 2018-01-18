@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "d3": "^4.12.2",
     "glamor": "^2.20.40",
     "glamorous": "^4.11.2",
     "react": "^16.2.0",
@@ -11,6 +12,7 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
+    "recharts": "^1.0.0-beta.9",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   },

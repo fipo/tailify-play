@@ -23,7 +23,8 @@ const Aside = glamorous.aside({
 const Main = glamorous.main({
   alignSelf: 'start',
   gridColumn: 2,
-  gridRow: 2
+  gridRow: 2,
+  paddingLeft: 10
 })
 
 const TwoColumn = props => (
