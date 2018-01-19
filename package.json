@@ -2,6 +2,10 @@
   "name": "tailify-play",
   "version": "0.1.0",
   "private": true,
+  "repository": "github:fipo/tailify-play",
+  "keywords": ["javascript", "API", "react", "redux", "crud"],
+  "author": "Philip Sotirov",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.17.1",
     "d3": "^4.12.2",
