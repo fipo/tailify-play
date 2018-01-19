@@ -1,7 +1,7 @@
 import React from 'react'
 import glamorous from 'glamorous'
 import _variables from '../styles/_variables'
-import Notification from './Notification'
+import NotificationContainer from '../containers//NotificationContainer'
 
 const PostWrapper = glamorous.div({
   backgroundColor: _variables.white,
@@ -24,11 +24,8 @@ const PostWrapper = glamorous.div({
 const Post = props => (
   <PostWrapper onClick={() => props.handleClick(props.relativePath)}>
     <img src={props.fullPath} alt={props.filename} />
-    {props.statusMessage ? (
-      <Notification theme="notice" text={props.statusMessage} />
-    ) : (
-      ''
-    )}
+    <NotificationContainer status={props.statusAPI} uri={props.statusURI} />
   </PostWrapper>
 )
+
 export default Post

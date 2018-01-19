@@ -10,7 +10,7 @@ export default function postsReducer(state = [], action) {
           id: index,
           fullPath: BASE_IMAGE_URL + post.path,
           relativePath: post.path,
-          statusMessage: '',
+          statusAPI: 0,
           statusURI: '',
           filename: post.path.replace(/^.*[\\/]/, '')
         }
@@ -23,7 +23,7 @@ export default function postsReducer(state = [], action) {
       const updateState = state.map(post => {
         if (post.relativePath === action.payload.data.filename) {
           const postUpdates = {
-            statusMessage: 'Pastebin has been updated!',
+            statusAPI: action.payload.status,
             statusURI: action.payload.data.uri
           }
           Object.assign(post, postUpdates)

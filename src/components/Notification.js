@@ -7,25 +7,22 @@ const alert = { main: { backgroundColor: _variables.red } }
 
 const StyledNotification = glamorous.div(
   {
+    borderRadius: 3,
+    bottom: 5,
+    margin: '0 5px',
     padding: '3px 5px',
     position: 'absolute',
-    width: 306,
-    margin: '0 5px',
-    borderRadius: 3,
-    bottom: 5
+    width: 306
   },
   ({ theme }) => ({
     backgroundColor: theme.main.backgroundColor
   })
 )
 
-const Notification = props => {
-  const theme = props.theme === 'notice' ? notice : alert
-  return (
-    <ThemeProvider theme={theme}>
-      <StyledNotification>{props.text}</StyledNotification>
-    </ThemeProvider>
-  )
-}
+const Notification = props => (
+  <ThemeProvider theme={props.theme === 'notice' ? notice : alert}>
+    <StyledNotification>{props.message}</StyledNotification>
+  </ThemeProvider>
+)
 
 export default Notification
