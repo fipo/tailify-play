@@ -21,7 +21,13 @@ const StyledNotification = glamorous.div(
 
 const Notification = props => (
   <ThemeProvider theme={props.theme === 'notice' ? notice : alert}>
-    <StyledNotification>{props.message}</StyledNotification>
+    <StyledNotification>
+      {props.message}
+      <br />
+      <a href={props.uri} target="_blank">
+        {props.uri}
+      </a>
+    </StyledNotification>
   </ThemeProvider>
 )
 
